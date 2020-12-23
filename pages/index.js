@@ -2,6 +2,7 @@ import Head from "next/head";
 import Main from "../components/Main/Main";
 import About from "../components/About/About";
 import styles from "../styles/Home.module.css";
+import Footer from "../components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -13,6 +14,10 @@ export default function Home() {
         <title>Hrak Torousian</title>
         <link
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap"
           rel="stylesheet"
         />
         <script
@@ -28,9 +33,7 @@ export default function Home() {
       </main>
 
       <footer>
-        <div className={styles["container-4"]} id="contact">
-          <p>© Hrak Torousian. All rights reserved. 2020</p>
-        </div>
+        <Footer />
       </footer>
     </div>
   );
