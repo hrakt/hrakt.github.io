@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Main from "../components/Main/Main";
 import About from "../components/About/About";
-import styles from "../styles/Home.module.css";
 import Footer from "../components/Footer/Footer";
+import Work from "../components/Work/Work";
 
 export default function Home() {
   return (
@@ -30,6 +30,7 @@ export default function Home() {
       <main>
         <Main />
         <About />
+        <Work />
       </main>
 
       <footer>
