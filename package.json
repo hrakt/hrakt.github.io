@@ -16,6 +16,6 @@
     "sass": "^1.30.0"
   },
   "devDependencies": {
-    "prettier": "@madeinhaus/prettier-config"
+    "prettier": "2.2.1"
   }
 }
