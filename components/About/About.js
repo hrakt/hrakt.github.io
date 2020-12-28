@@ -17,7 +17,9 @@ const About = () => {
           beyond, to create eye-catching experiences and solve real-world
           problems.
         </p>
-        <a href="/">Download my resume</a>
+        <a href="Resume.docx" download>
+          Download my resume
+        </a>
         <h3>Contact me here!</h3>
         <p>
           Email: <a href="/">hello@hrak.dev</a>
