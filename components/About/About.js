@@ -22,11 +22,11 @@ const About = () => {
         </a>
         <h3>Contact me here!</h3>
         <p>
-          Email: <a href="/">hello@hrak.dev</a>
+          <a href="mailto:hello@hrak.dev">Email Me!</a>
         </p>
 
         <p>
-          Number: <a href="/">000-000-0000</a>
+          Number: <a href="tel:818-658-4368">818-658-4368</a>
         </p>
       </div>
     </div>
