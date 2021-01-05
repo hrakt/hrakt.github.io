@@ -1,37 +1,42 @@
 @import "styles/breakpoints.scss";
 
 .container {
-  padding: 7rem 0;
+  padding: 7rem 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 0 4rem;
+}
+
+.seperator {
+  width: 10rem;
+  height: 3rem;
 }
 
 .image {
-  &__container {
-    padding-left: 1rem;
+  &__contianer {
+    padding: 0 3rem 0 3rem 0;
   }
+  height: auto;
 }
 
 .text {
   &__container {
-    padding: 1rem 1rem;
-    padding-top: 5rem;
+    height: 100%;
+    max-width: 25rem;
   }
 }
 
 @include tablet {
   .text__container {
     flex-direction: row;
-    padding: 0 4rem;
+    max-width: 30rem;
   }
 
   .container {
     flex-direction: row;
   }
   .image__container {
-    padding-left: 3rem;
+    padding: 0 3rem 0 3rem 0;
   }
 }
