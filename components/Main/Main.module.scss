@@ -11,10 +11,6 @@
   }
 }
 .main-container {
-  // position: relative;
-  // left: 10rem;
-  // padding-top: 5rem;
-
   &__heading1 {
     font-size: 4.5rem;
     font-weight: 100;
@@ -58,7 +54,8 @@
   text-indent: 12px;
   margin-right: 14rem;
   font-weight: 500;
-  font-style: italic;
+  width: 100%;
+  // font-style: italic;
   // margin-left: 5rem;
 }
 .slidingVertical span {
