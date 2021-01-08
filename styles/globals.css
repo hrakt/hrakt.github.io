@@ -19,3 +19,13 @@ a {
 * {
   box-sizing: border-box;
 }
+
+:root {
+  --toggle-size: 1rem;
+  --switch-w: 4em;
+  --switch-h: 2em;
+  --switch-handle-scale: 0.65;
+  --switch-off-handle-x: -0.125em;
+  --switch-on-handle-x: calc(100% - 0.125em);
+  --switch-transition-duration: 0.2s;
+}
