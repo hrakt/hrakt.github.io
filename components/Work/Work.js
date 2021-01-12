@@ -24,7 +24,7 @@ const Work = () => {
               <div>{item.description}</div>
             </div>
             <div className={styles["item__imageBox"]}>
-              <img src={item.imgSrc} width="400" height="200" />
+              <img src={item.imgSrc} className={styles["item__image"]} />
             </div>
           </div>
         );

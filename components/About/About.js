@@ -5,7 +5,7 @@ const About = () => {
     <div className={styles["container"]}>
       <div className={styles["image__container"]}>
         <div className={styles["image__box"]}>
-          <img src="Portrait.jpg" alt="Portrait" width="390" />
+          <img src="Portrait.jpg" alt="Portrait" className={styles.image} />
         </div>
       </div>
       <div className={styles["seperator"]} />

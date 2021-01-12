@@ -32,6 +32,11 @@
   &__left {
     flex-direction: column-reverse;
   }
+  &__image {
+    width: auto;
+    height: 200px;
+  }
+
   &__textBox {
     max-width: 30rem;
     padding: 0 3rem;
