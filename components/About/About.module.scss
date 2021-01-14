@@ -15,10 +15,10 @@
 
 .image {
   &__contianer {
-    padding: 0 3rem 0 3rem 0;
+    // padding: 0 3rem 0 3rem 0;
   }
   width: auto;
-  height: 550px;
+  height: 500px;
 }
 
 .text {
@@ -39,5 +39,8 @@
   }
   .image__container {
     padding: 0 3rem 0 3rem 0;
+  }
+  .image {
+    height: 550px;
   }
 }
