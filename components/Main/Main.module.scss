@@ -1,7 +1,6 @@
 @import "styles/breakpoints.scss";
 
 .container {
-  // background-color: lightgray;
   height: 90vh;
   display: flex;
   align-items: center;
@@ -84,6 +83,9 @@
 }
 
 @include tablet {
+  .container {
+    height: 90vh;
+  }
   .main-container {
     &__heading1 {
       font-size: 4.5rem;

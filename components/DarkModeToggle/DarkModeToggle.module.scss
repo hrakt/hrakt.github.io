@@ -5,7 +5,7 @@
   align-items: center;
   position: absolute;
   top: 50%;
-  left: 90%;
+  right: 1px;
   transform: rotateZ(90deg);
 
   em {
@@ -51,6 +51,7 @@
 
 @include tablet {
   .themeSwitchWrapper {
-    left: 95%;
+    right: 1px;
+    top: 45%;
   }
 }

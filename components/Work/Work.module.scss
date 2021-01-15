@@ -34,7 +34,7 @@
   }
   &__image {
     width: auto;
-    height: 200px;
+    height: 180px;
   }
 
   &__textBox {
@@ -70,6 +70,9 @@
     }
     &__textBox {
       padding-top: 0;
+    }
+    &__image {
+      height: 200px;
     }
   }
 }
