@@ -10,8 +10,8 @@ const About = () => {
       </div>
       <div className={styles["seperator"]} />
       <div className={styles["text__container"]}>
-        <h1>About me</h1>
         <div className={styles["text__paragraph"]}>
+          <h1>About me</h1>
           <p>
             Experienced Web Developer with a demonstrated history of work in the
             web agency and tech startup industry. Always curious and eager about
@@ -19,19 +19,19 @@ const About = () => {
             and beyond, to create eye-catching experiences and solve real-world
             problems.
           </p>
+
+          <a href="Resume.docx" download>
+            Download my resume
+          </a>
+          <h3>Contact me here!</h3>
+          <p>
+            <a href="mailto:hello@hrak.dev">Email Me!</a>
+          </p>
+
+          <p>
+            Number: <a href="tel:818-658-4368">818-658-4368</a>
+          </p>
         </div>
-
-        <a href="Resume.docx" download>
-          Download my resume
-        </a>
-        <h3>Contact me here!</h3>
-        <p>
-          <a href="mailto:hello@hrak.dev">Email Me!</a>
-        </p>
-
-        <p>
-          Number: <a href="tel:818-658-4368">818-658-4368</a>
-        </p>
       </div>
     </div>
   );

@@ -44,7 +44,7 @@ export default function Home() {
           <Main />
           <About />
           <Work />
-          <DarkModeToggle toggle={toggle} darkMode={darkMode} />
+          {/* <DarkModeToggle toggle={toggle} darkMode={darkMode} /> */}
         </main>
 
         <footer>

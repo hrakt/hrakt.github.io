@@ -1,7 +1,7 @@
 @import "styles/breakpoints.scss";
 
 .container {
-  padding: 7rem 4rem;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,6 +23,9 @@
     height: 100%;
     max-width: 25rem;
   }
+  &__paragraph {
+    margin: 3rem 2rem;
+  }
 }
 
 @include tablet {
@@ -33,9 +36,6 @@
 
   .container {
     flex-direction: row;
-  }
-  .image__container {
-    padding: 0 3rem 0 3rem 0;
   }
   .image {
     height: 550px;
