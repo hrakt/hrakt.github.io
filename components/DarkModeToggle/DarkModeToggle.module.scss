@@ -1,9 +1,11 @@
+@import "styles/breakpoints.scss";
+
 .themeSwitchWrapper {
   display: flex;
   align-items: center;
   position: absolute;
   top: 50%;
-  left: 95vw;
+  left: 90%;
   transform: rotateZ(90deg);
 
   em {
@@ -44,5 +46,11 @@
     &:before {
       transform: translateX(26px);
     }
+  }
+}
+
+@include tablet {
+  .themeSwitchWrapper {
+    left: 95%;
   }
 }
