@@ -1,5 +1,4 @@
 import styles from "../Main/Main.module.scss";
-// import Button from '../common/Button';
 
 const Main = () => {
   return (
