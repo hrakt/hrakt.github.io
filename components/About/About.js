@@ -2,15 +2,15 @@ import styles from "../About/About.module.scss";
 
 const About = () => {
   return (
-    <div className={styles["container"]}>
-      <div className={styles["image__container"]}>
-        <div className={styles["image__box"]}>
+    <div className={styles.container}>
+      <div className={styles.image__container}>
+        <div className={styles.image__box}>
           <img src="Portrait.jpg" alt="Portrait" className={styles.image} />
         </div>
       </div>
-      <div className={styles["seperator"]} />
-      <div className={styles["text__container"]}>
-        <div className={styles["text__paragraph"]}>
+      <div className={styles.seperator} />
+      <div className={styles.text__container}>
+        <div className={styles.text__paragraph}>
           <h1>About me</h1>
           <p>
             Experienced Web Developer with a demonstrated history of work in the

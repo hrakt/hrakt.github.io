@@ -6,8 +6,8 @@ var align;
 
 const Work = () => {
   return (
-    <div className={styles["container"]}>
-      <div className={styles["header"]}>
+    <div className={styles.container}>
+      <div className={styles.header}>
         <span>Portfolio</span>
         <h2>Check out few of my works</h2>
       </div>
@@ -15,16 +15,16 @@ const Work = () => {
         key % 2 === 0 ? (align = "left") : (align = "right");
         return (
           <div
-            className={classNames(styles["item"], styles[`item__${align}`])}
+            className={classNames(styles.item, styles[`item__${align}`])}
             key={key}
           >
-            <div className={styles["item__textBox"]}>
+            <div className={styles.item__textBox}>
               <div>{item.type}</div>
               <div>{item.title}</div>
               <div>{item.description}</div>
             </div>
-            <div className={styles["item__imageBox"]}>
-              <img src={item.imgSrc} className={styles["item__image"]} />
+            <div className={styles.item__imageBox}>
+              <img src={item.imgSrc} className={styles.item__image} />
             </div>
           </div>
         );
