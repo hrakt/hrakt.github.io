@@ -6,7 +6,12 @@ var align;
 
 const Work = () => {
   return (
-    <div className={styles["container"]}>
+    <div
+      onClick={() => {
+        console.log("hello");
+      }}
+      className={styles["container"]}
+    >
       <div className={styles["header"]}>
         <span>Portfolio</span>
         <h2>Check out few of my works</h2>
