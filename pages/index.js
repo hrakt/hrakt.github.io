@@ -18,7 +18,7 @@ export default function Home() {
 
   return (
     <div>
-      <ThemeProvider theme={lightTheme}>
+      <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
         <GlobalStyles />
         <Head>
           <meta charSet="utf-8" />
