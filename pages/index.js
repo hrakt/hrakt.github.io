@@ -6,11 +6,13 @@ import About from "../components/About/About";
 import Footer from "../components/Footer/Footer";
 import Work from "../components/Work/Work";
 import DarkModeToggle from "../components/DarkModeToggle/DarkModeToggle";
+import Nav from "../components/Nav/Nav";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "../theme/theme";
 import { GlobalStyles } from "../theme/globals";
 
 export default function Home() {
+  const secttionArr = ["Intro", "About", "Work"];
   const [darkMode, setDarkMode] = useState(false);
   const toggle = () => {
     setDarkMode(!darkMode);
@@ -41,6 +43,7 @@ export default function Home() {
         </Head>
 
         <main>
+          <Nav sectionArr={secttionArr} />
           <Main />
           <About />
           <Work />
