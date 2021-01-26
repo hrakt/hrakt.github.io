@@ -7,7 +7,6 @@ const DarkModeToggle = ({ darkMode, toggle }) => {
       <label className={styles.themeSwitch}>
         <div
           className={cx(styles.slider, { [styles.checked]: darkMode })}
-          round
         ></div>
       </label>
     </div>

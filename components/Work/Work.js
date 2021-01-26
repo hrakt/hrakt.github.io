@@ -7,6 +7,7 @@ var align;
 const Work = () => {
   return (
     <div className={styles.container}>
+      <a id="Work" />
       <div className={styles.header}>
         <span>Portfolio</span>
         <h2>Check out few of my works</h2>
