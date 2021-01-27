@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import styles from "./Nav.module.scss";
 import PropTypes from "prop-types";
-import cx from "classNames";
+import cx from "classnames";
 
 const Nav = ({ sectionArr }) => {
   const [shownKey, setShownKey] = useState(-1);
