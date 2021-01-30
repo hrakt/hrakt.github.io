@@ -43,7 +43,7 @@ export default function Home() {
         </Head>
 
         <main>
-          <Nav sectionArr={secttionArr} />
+          <Nav sectionArr={secttionArr} darkMode={darkMode} />
           <Main />
           <About />
           <Work />

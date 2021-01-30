@@ -35,6 +35,9 @@
     transform: scale(1.5);
     border-radius: 100px;
   }
+  &.darkMode {
+    background: white;
+  }
 }
 
 .section {

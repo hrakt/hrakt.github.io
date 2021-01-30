@@ -3,7 +3,7 @@ import styles from "./Nav.module.scss";
 import PropTypes from "prop-types";
 import cx from "classnames";
 
-const Nav = ({ sectionArr }) => {
+const Nav = ({ sectionArr, darkMode }) => {
   const [shownKey, setShownKey] = useState(-1);
 
   return (
@@ -20,6 +20,7 @@ const Nav = ({ sectionArr }) => {
             <div
               className={cx(styles.dot, {
                 [styles.shown]: key === shownKey,
+                [styles.darkMode]: darkMode,
               })}
             />
           </div>
@@ -38,6 +39,7 @@ const Nav = ({ sectionArr }) => {
 
 Nav.propTpes = {
   sectionArr: PropTypes.array.isRequired,
+  darkMode: PropTypes.bool,
 };
 
 export default Nav;
