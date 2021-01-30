@@ -10,6 +10,7 @@ import Nav from "../components/Nav/Nav";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "../theme/theme";
 import { GlobalStyles } from "../theme/globals";
+import Skills from "../components/Skills/Skills";
 
 export default function Home() {
   const secttionArr = ["Intro", "About", "Work"];
@@ -46,6 +47,7 @@ export default function Home() {
           <Nav sectionArr={secttionArr} darkMode={darkMode} />
           <Main />
           <About />
+          <Skills />
           <Work />
           <DarkModeToggle toggle={toggle} darkMode={darkMode} />
         </main>
