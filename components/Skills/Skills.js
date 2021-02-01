@@ -1,9 +1,18 @@
+import SvgIcon from "../SvgIcon";
 import styles from "./Skills.module.scss";
 
 const skillsArr = [
   {
-    title: "Front-End",
-    techArr: ["Javascript", "HTML", "CSS"],
+    title: "Front End",
+    techArr: ["Javascript", "HTML", "React"],
+  },
+  {
+    title: "Back End",
+    techArr: ["Node.js", "Python", "Java"],
+  },
+  {
+    title: "Design",
+    techArr: ["Figma", "Illustrator", "Sketch"],
   },
 ];
 
@@ -20,7 +29,7 @@ const Skills = () => {
                 {stack.techArr.map((tech, key) => {
                   return (
                     <div key={key} className={styles.tech}>
-                      <div className={styles.iconWrapper}></div>
+                      <SvgIcon className={styles.iconWrapper} iconType={tech} />
                       <div className={styles.name}>{tech}</div>
                     </div>
                   );
