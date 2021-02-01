@@ -4,7 +4,6 @@ import styles from "./SvgIcon.module.scss";
 import icons from "./icons";
 
 const SvgIcon = ({ className, iconType }) => {
-  console.log(icons[iconType]);
   return (
     <div
       className={cx(className, styles.wrapper)}

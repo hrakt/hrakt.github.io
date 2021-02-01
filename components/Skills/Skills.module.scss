@@ -1,3 +1,5 @@
+@import "styles/breakpoints.scss";
+
 .skills {
   width: 100%;
   display: flex;
@@ -18,14 +20,16 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  flex-direction: column;
 }
 
 .stackContainer {
-  width: 21rem;
+  width: 18rem;
   height: 25rem;
-  border: 1px black solid;
-  padding: 1rem;
-  margin-right: 2rem;
+  background-color: whitesmoke;
+  padding: 0.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 2rem;
   &:last-of-type {
     margin-right: 0;
   }
@@ -36,6 +40,24 @@
   justify-content: space-between;
   margin-top: 1rem;
 }
+
+.stackTitle {
+  text-transform: uppercase;
+  letter-spacing: 0.1cm;
+  font-weight: 400;
+  color: grey;
+}
+
 .tech {
   width: 6rem;
+}
+
+@include tablet {
+  .skillContainer {
+    margin-right: 2rem;
+    flex-direction: row;
+  }
+  .stackContainer {
+    margin-right: 2rem;
+  }
 }
