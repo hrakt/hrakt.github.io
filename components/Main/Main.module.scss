@@ -20,7 +20,12 @@
   &__heading2 {
     font-size: 1.5rem;
     font-weight: 100;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1.6rem;
+  }
+  .paragraph {
+    font-weight: 200;
+    font-size: 1.1rem;
+    color: #777e87;
   }
 }
 
@@ -64,7 +69,7 @@
   .mainContainer {
     position: relative;
     top: 12rem;
-    left: 12rem;
+    left: 14rem;
     &__heading1 {
       font-size: 4.5rem;
       font-weight: 500;
