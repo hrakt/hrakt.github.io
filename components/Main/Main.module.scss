@@ -3,14 +3,13 @@
 .container {
   height: 100%;
   line-height: 1;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
+
   a {
     text-decoration: none;
   }
 }
 .mainContainer {
+  max-width: 40rem;
   &__heading1 {
     font-size: 2.5rem;
     font-weight: 300;
@@ -26,6 +25,13 @@
     font-weight: 200;
     font-size: 1.1rem;
     color: #777e87;
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  div {
+    margin-right: 1rem;
   }
 }
 
@@ -68,8 +74,7 @@
 @include tablet {
   .mainContainer {
     position: relative;
-    top: 12rem;
-    left: 14rem;
+
     &__heading1 {
       font-size: 4.5rem;
       font-weight: 500;
@@ -78,6 +83,13 @@
       font-size: 2.5rem;
       font-weight: 200;
     }
+  }
+}
+
+@include desktop {
+  .mainContainer {
+    padding-top: 12rem;
+    padding-left: 8rem;
   }
 }
 

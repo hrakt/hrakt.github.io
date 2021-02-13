@@ -1,3 +1,4 @@
+import Button from "../Button";
 import styles from "../Main/Main.module.scss";
 
 const Main = () => {
@@ -19,6 +20,10 @@ const Main = () => {
             Full Stack Developer
           </h2>
           <p className={styles.paragraph}>I like coding, coffee and podcasts</p>
+          <div className={styles.buttonContainer}>
+            <Button theme={"blue"}>Projects</Button>
+            <Button theme={"grey"}>Resume</Button>
+          </div>
         </div>
       </div>
     </>
