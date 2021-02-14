@@ -12,7 +12,7 @@ const Button = ({ children, theme, className, link, icon }) => {
       })}
     >
       <a href={link}>{children}</a>
-      {icon && <SvgIcon icon={icon} />}
+      {icon && <SvgIcon iconType={icon} />}
     </div>
   );
 };
