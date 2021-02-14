@@ -1,8 +1,9 @@
 import React from "react";
 import styles from "./Button.module.scss";
 import cx from "classnames";
+import SvgIcon from "../SvgIcon/index";
 
-const Button = ({ children, theme, className, link }) => {
+const Button = ({ children, theme, className, link, icon }) => {
   return (
     <div
       className={cx(styles.button, className, {
@@ -11,6 +12,7 @@ const Button = ({ children, theme, className, link }) => {
       })}
     >
       <a href={link}>{children}</a>
+      {icon && <SvgIcon icon={icon} />}
     </div>
   );
 };
