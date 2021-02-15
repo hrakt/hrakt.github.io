@@ -41,6 +41,15 @@
   }
 }
 
+.secondaryContainer {
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: #2885f6;
+}
+
 .downloadButton {
   svg {
     margin-top: 1px;
