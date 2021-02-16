@@ -21,8 +21,16 @@ const Main = () => {
           </h2>
           <p className={styles.paragraph}>I like coding, coffee and podcasts</p>
           <div className={styles.buttonContainer}>
-            <Button theme={"blue"}>Projects</Button>
-            <Button theme={"grey"}>Resume</Button>
+            <Button theme="blue" icon="Work" className={styles.projectButton}>
+              Projects
+            </Button>
+            <Button
+              theme="grey"
+              icon="Download"
+              className={styles.downloadButton}
+            >
+              Resume
+            </Button>
           </div>
         </div>
       </div>
