@@ -1,9 +1,11 @@
+import React from "react";
+
 import Button from "../Button";
 import styles from "../Main/Main.module.scss";
 
 const Main = () => {
   return (
-    <>
+    <React.Fragment>
       <a id="Intro" />
       <div className={styles.container}>
         <div className={styles.mainContainer}>
@@ -31,7 +33,7 @@ const Main = () => {
         </div>
         <div className={styles.secondaryContainer} />
       </div>
-    </>
+    </React.Fragment>
   );
 };
 export default Main;
