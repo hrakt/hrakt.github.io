@@ -9,16 +9,18 @@
   }
 }
 .mainContainer {
-  max-width: 40rem;
+  max-width: 30rem;
+  position: relative;
+
   &__heading1 {
-    font-size: 2.5rem;
-    font-weight: 300;
+    font-size: 1.5rem;
+    font-weight: 500;
     margin-bottom: 0.8rem;
   }
 
   &__heading2 {
     font-size: 1.5rem;
-    font-weight: 100;
+    font-weight: 200;
     margin-bottom: 1.6rem;
   }
   .paragraph {
@@ -43,10 +45,9 @@
 
 .secondaryContainer {
   position: absolute;
-  width: 30%;
-  height: 100%;
-  top: 0;
-  right: 0;
+  width: 100%;
+  height: 40%;
+  bottom: 0;
   background-color: #2885f6;
 }
 
@@ -60,8 +61,34 @@
 
 @include tablet {
   .mainContainer {
-    position: relative;
+    max-width: 40rem;
+    top: 20%;
+    left: 18%;
 
+    &__heading1 {
+      font-size: 2.5rem;
+      font-weight: 500;
+    }
+    &__heading2 {
+      font-size: 1.5rem;
+      font-weight: 200;
+    }
+  }
+
+  .secondaryContainer {
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: #2885f6;
+  }
+}
+
+@include desktop {
+  .mainContainer {
+    top: 20%;
+    left: 18%;
     &__heading1 {
       font-size: 4.5rem;
       font-weight: 500;
@@ -70,12 +97,5 @@
       font-size: 2.5rem;
       font-weight: 200;
     }
-  }
-}
-
-@include desktop {
-  .mainContainer {
-    top: 20%;
-    left: 18%;
   }
 }
