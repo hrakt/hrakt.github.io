@@ -4,13 +4,15 @@ import cx from "classnames";
 
 const Nav = ({ sectionArr, darkMode }) => {
   return (
-    <div className={styles.navWrapper}>
+    <ul className={styles.navWrapper}>
       {sectionArr.map((title, key) => (
-        <a className={styles.sectionWrapper} key={key} href={`#${title}`}>
-          {title}
-        </a>
+        <li className={styles.navItem}>
+          <a className={styles.sectionWrapper} key={key} href={`#${title}`}>
+            {title}
+          </a>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
 
