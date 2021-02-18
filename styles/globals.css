@@ -5,7 +5,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+a {
   padding: 0;
   margin: 0;
   font-family: "Poppins", sans-serif;
@@ -19,4 +20,15 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+html,
+body {
+  overflow-x: hidden;
 }

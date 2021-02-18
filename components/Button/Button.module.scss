@@ -1,0 +1,30 @@
+.button {
+  padding: 1rem 1.4rem;
+  color: #ffffff;
+  align-self: center;
+  border-radius: 3px;
+  display: flex;
+  font-size: 1.1rem;
+  align-items: center;
+  flex-direction: row;
+  cursor: pointer;
+  transition: opacity 0.2s linear;
+  a {
+    margin-right: 0.2rem;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.grey {
+  background: #767d84;
+}
+
+.blue {
+  background: #2885f6;
+}
+
+.arrow {
+  margin-left: 0.8rem;
+}

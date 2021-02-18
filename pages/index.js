@@ -13,8 +13,8 @@ import { GlobalStyles } from "../theme/globals";
 import Skills from "../components/Skills/Skills";
 
 export default function Home() {
-  const secttionArr = ["Intro", "About", "Work"];
   const [darkMode, setDarkMode] = useState(false);
+
   const toggle = () => {
     setDarkMode(!darkMode);
   };
@@ -44,17 +44,14 @@ export default function Home() {
         </Head>
 
         <main>
-          <Nav sectionArr={secttionArr} darkMode={darkMode} />
+          {/* <Nav sectionArr={secttionArr} darkMode={darkMode} /> */}
           <Main />
           <About />
           <Skills />
           <Work />
-          <DarkModeToggle toggle={toggle} darkMode={darkMode} />
-        </main>
-
-        <footer>
+          {/* <DarkModeToggle toggle={toggle} darkMode={darkMode} /> */}
           <Footer />
-        </footer>
+        </main>
       </ThemeProvider>
     </div>
   );
