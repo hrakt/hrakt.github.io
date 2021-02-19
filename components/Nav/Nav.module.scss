@@ -15,6 +15,44 @@
   display: none;
 }
 
+.hamburger {
+  padding: 0;
+  border: 0;
+  background-color: inherit;
+  top: 6.5%;
+  right: 4%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 35px;
+  z-index: 10;
+}
+
+.hamburger {
+  span,
+  &:before,
+  &:after {
+    background: #000;
+    content: "";
+    display: block;
+    height: 3px;
+    border-radius: 5px;
+    margin: 7px 0;
+    transition: all 0.5s;
+  }
+}
+
+.open {
+  &.hamburger span {
+    transform: scale(0);
+  }
+  &.hamburger:before {
+    transform: translateY(10px) rotate(135deg);
+  }
+  &.hamburger:after {
+    transform: translateY(-10px) rotate(-135deg);
+  }
+}
+
 .navItem {
   position: relative;
   font-weight: 500;
@@ -44,41 +82,18 @@
   }
 }
 
-// .dotWrapper {
-//   position: relative;
-//   height: 100%;
-//   width: 12px;
-//   display: flex;
-//   align-items: center;
-//   margin-right: 5px;
-// }
-
-// .dot {
-//   width: 7px;
-//   height: 7px;
-//   margin-left: 0.5px;
-//   background: black;
-//   border-radius: 100px;
-//   transform: scale(1);
-//   transition: transform 0.25s ease-in;
-//   &.shown {
-//     transform: scale(1.5);
-//     border-radius: 100px;
-//   }
-//   &.darkMode {
-//     background: white;
-//   }
-// }
-
 @include tablet {
   .navWrapper {
     left: 18%;
   }
-}
-
-@include desktop {
   .sectionWrapper {
     display: flex;
     flex-direction: row;
+  }
+}
+
+@include desktop {
+  .hamburger {
+    display: none;
   }
 }
