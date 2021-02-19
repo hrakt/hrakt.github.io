@@ -11,10 +11,12 @@ a {
   margin: 0;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
+  text-align: left;
 }
 
 a {
   color: inherit;
+  cursor: pointer;
   text-decoration: none;
 }
 
@@ -26,6 +28,7 @@ main {
   height: 100vh;
   width: 100%;
   overflow-x: hidden;
+  position: relative;
 }
 
 html,

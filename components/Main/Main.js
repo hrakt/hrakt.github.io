@@ -6,7 +6,7 @@ import styles from "../Main/Main.module.scss";
 const Main = () => {
   return (
     <React.Fragment>
-      <a id="Intro" />
+      {/* <a id="Intro" /> */}
       <div className={styles.container}>
         <div className={styles.mainContainer}>
           <h1 className={styles.mainContainer__heading1}>Hrak Torousian </h1>

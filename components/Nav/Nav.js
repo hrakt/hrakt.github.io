@@ -1,39 +1,16 @@
-import { useState, useEffect } from "react";
 import styles from "./Nav.module.scss";
 import PropTypes from "prop-types";
 import cx from "classnames";
 
 const Nav = ({ sectionArr, darkMode }) => {
-  const [shownKey, setShownKey] = useState(-1);
-
   return (
-    <nav className={styles.navWrapper}>
+    <div className={styles.navWrapper}>
       {sectionArr.map((title, key) => (
-        <a
-          className={styles.sectionWrapper}
-          key={key}
-          onMouseEnter={() => setShownKey(key)}
-          onMouseLeave={() => setShownKey(-1)}
-          href={`#${title}`}
-        >
-          <div className={styles.dotWrapper}>
-            <div
-              className={cx(styles.dot, {
-                [styles.shown]: key === shownKey,
-                [styles.darkMode]: darkMode,
-              })}
-            />
-          </div>
-          <section
-            className={cx(styles.section, {
-              [styles.shown]: key === shownKey,
-            })}
-          >
-            {title}
-          </section>
+        <a className={styles.sectionWrapper} key={key} href={`#${title}`}>
+          {title}
         </a>
       ))}
-    </nav>
+    </div>
   );
 };
 

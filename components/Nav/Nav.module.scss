@@ -1,51 +1,52 @@
 @import "styles/breakpoints.scss";
 
 .navWrapper {
-  position: sticky;
-  top: 50%;
-  width: 70px;
+  position: absolute;
+  top: 5%;
+  left: 6%;
+  width: 12rem;
   margin-left: 10px;
-  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 10;
 }
 
 .sectionWrapper {
   display: flex;
   flex-direction: row;
-  height: 25px;
+  text-transform: inherit;
+  // cursor: pointer;
 }
 
-.dotWrapper {
-  position: relative;
-  height: 100%;
-  width: 12px;
-  display: flex;
-  align-items: center;
-  margin-right: 5px;
-}
+// .dotWrapper {
+//   position: relative;
+//   height: 100%;
+//   width: 12px;
+//   display: flex;
+//   align-items: center;
+//   margin-right: 5px;
+// }
 
-.dot {
-  width: 7px;
-  height: 7px;
-  margin-left: 0.5px;
-  background: black;
-  border-radius: 100px;
-  transform: scale(1);
-  transition: transform 0.25s ease-in;
-  &.shown {
-    transform: scale(1.5);
-    border-radius: 100px;
-  }
-  &.darkMode {
-    background: white;
-  }
-}
+// .dot {
+//   width: 7px;
+//   height: 7px;
+//   margin-left: 0.5px;
+//   background: black;
+//   border-radius: 100px;
+//   transform: scale(1);
+//   transition: transform 0.25s ease-in;
+//   &.shown {
+//     transform: scale(1.5);
+//     border-radius: 100px;
+//   }
+//   &.darkMode {
+//     background: white;
+//   }
+// }
 
-.section {
-  transform: scale(0);
-  opacity: 0;
-  transition: all 0.25s ease-in;
-  &.shown {
-    transform: scale(1);
-    opacity: 1;
+@include tablet {
+  .navWrapper {
+    left: 18%;
   }
 }
