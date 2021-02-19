@@ -2,27 +2,29 @@
 
 .navWrapper {
   position: absolute;
-  top: 5%;
+  top: 2%;
   left: 6%;
-  // width: 12rem;
   margin-left: 10px;
   display: flex;
   flex-direction: row;
+  align-items: center;
   z-index: 10;
+}
+
+.sectionWrapper {
+  display: none;
 }
 
 .navItem {
   position: relative;
+  font-weight: 500;
   display: flex;
   flex-direction: row;
-  margin-right: 2rem;
-}
+  margin-right: 3rem;
 
-.sectionWrapper {
-  text-transform: inherit;
   &::after {
     background: none repeat scroll 0 0 transparent;
-    bottom: 0;
+    bottom: -3px;
     content: "";
     display: block;
     height: 2px;
@@ -36,7 +38,10 @@
     width: 100%;
     left: 0;
   }
-  // cursor: pointer;
+
+  &:nth-of-type(1) {
+    margin-left: 4rem;
+  }
 }
 
 // .dotWrapper {
@@ -68,5 +73,12 @@
 @include tablet {
   .navWrapper {
     left: 18%;
+  }
+}
+
+@include desktop {
+  .sectionWrapper {
+    display: flex;
+    flex-direction: row;
   }
 }

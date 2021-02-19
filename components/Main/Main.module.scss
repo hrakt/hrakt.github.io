@@ -63,7 +63,7 @@
 @include tablet {
   .mainContainer {
     max-width: 40rem;
-    top: 20%;
+    top: 25%;
     left: 18%;
 
     &__heading1 {
@@ -88,7 +88,7 @@
 
 @include desktop {
   .mainContainer {
-    top: 20%;
+    top: 25%;
     left: 18%;
     &__heading1 {
       font-size: 4.5rem;

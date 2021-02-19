@@ -1,17 +1,19 @@
 import styles from "./Nav.module.scss";
 import PropTypes from "prop-types";
 import cx from "classnames";
+import SvgIcon from "../SvgIcon";
 
 const Nav = ({ sectionArr, darkMode }) => {
   return (
     <ul className={styles.navWrapper}>
-      {sectionArr.map((title, key) => (
-        <li className={styles.navItem}>
-          <a className={styles.sectionWrapper} key={key} href={`#${title}`}>
-            {title}
-          </a>
-        </li>
-      ))}
+      <SvgIcon iconType="Logo" className={styles.logo} />
+      <div className={styles.sectionWrapper}>
+        {sectionArr.map((title, key) => (
+          <li key={key} className={styles.navItem}>
+            <a href={`#${title}`}>{title}</a>
+          </li>
+        ))}
+      </div>
     </ul>
   );
 };
