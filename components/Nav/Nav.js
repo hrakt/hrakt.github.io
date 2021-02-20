@@ -13,25 +13,31 @@ const Nav = ({ sectionArr, darkMode }) => {
   };
 
   return (
-    <React.Fragment>
-      <div
-        className={cx(styles.hamburger, { [styles.open]: menuOpen })}
-        onClick={handleClick}
-      >
-        <span></span>
-      </div>
-      <ul className={styles.navWrapper}>
+    <nav className={styles.nav}>
+      <div className={styles.logoContainer}>
         <SvgIcon iconType="Logo" className={styles.logo} />
+      </div>
 
-        <div className={styles.sectionWrapper}>
-          {sectionArr.map((title, key) => (
-            <li key={key} className={styles.navItem}>
-              <a href={`#${title}`}>{title}</a>
-            </li>
-          ))}
+      <div className={cx(styles.navContainer, { [styles.open]: menuOpen })}>
+        <ul>
+          {sectionArr.map((item, key) => {
+            return (
+              <li key={key} className={styles.navItem}>
+                {item}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+
+      <div className={styles.hamburgerWrapper} onClick={handleClick}>
+        <div
+          className={cx(styles.center, { [styles.hamburgerOpen]: menuOpen })}
+        >
+          <div></div>
         </div>
-      </ul>
-    </React.Fragment>
+      </div>
+    </nav>
   );
 };
 

@@ -31,8 +31,8 @@ const Main = () => {
             </Button>
           </div>
         </div>
-        <div className={styles.secondaryContainer} />
       </div>
+      <div className={styles.secondaryContainer} />
     </React.Fragment>
   );
 };

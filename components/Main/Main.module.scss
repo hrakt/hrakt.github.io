@@ -11,7 +11,7 @@
 .mainContainer {
   position: relative;
   top: 15%;
-  left: 8%;
+  padding-left: 3rem;
 
   &__heading1 {
     font-size: 1.5rem;
@@ -62,9 +62,9 @@
 
 @include tablet {
   .mainContainer {
-    max-width: 40rem;
+    max-width: 60rem;
     top: 25%;
-    left: 18%;
+    padding-left: 19rem;
 
     &__heading1 {
       font-size: 2.5rem;
@@ -89,7 +89,7 @@
 @include desktop {
   .mainContainer {
     top: 25%;
-    left: 18%;
+
     &__heading1 {
       font-size: 4.5rem;
       font-weight: 500;
