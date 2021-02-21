@@ -13,6 +13,12 @@ import { GlobalStyles } from "../theme/globals";
 import Skills from "../components/Skills/Skills";
 
 export default function Home() {
+  const sectionArr = [
+    { title: "Home", href: "/" },
+    { title: "About", href: "/" },
+    { title: "Portfolio", href: "/" },
+    { title: "Blog", href: "/" },
+  ];
   const [darkMode, setDarkMode] = useState(false);
 
   const toggle = () => {
@@ -36,6 +42,7 @@ export default function Home() {
             href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap"
             rel="stylesheet"
           />
+          <link rel="icon" href="Logo.png" />
           <script
             src="https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js"
             integrity="sha256-Wua0LsQkGDEeIkbmBNjj9wcThJh5uCD6R8+5YQhXveQ="
@@ -44,7 +51,7 @@ export default function Home() {
         </Head>
 
         <main>
-          {/* <Nav sectionArr={secttionArr} darkMode={darkMode} /> */}
+          <Nav sectionArr={sectionArr} darkMode={darkMode} />
           <Main />
           <About />
           <Skills />

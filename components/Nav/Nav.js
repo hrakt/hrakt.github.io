@@ -1,38 +1,43 @@
-import { useState, useEffect } from "react";
+import React, { useState } from "react";
+
 import styles from "./Nav.module.scss";
 import PropTypes from "prop-types";
 import cx from "classnames";
+import SvgIcon from "../SvgIcon";
+import Link from "next/link";
 
 const Nav = ({ sectionArr, darkMode }) => {
-  const [shownKey, setShownKey] = useState(-1);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleClick = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   return (
-    <nav className={styles.navWrapper}>
-      {sectionArr.map((title, key) => (
-        <a
-          className={styles.sectionWrapper}
-          key={key}
-          onMouseEnter={() => setShownKey(key)}
-          onMouseLeave={() => setShownKey(-1)}
-          href={`#${title}`}
+    <nav className={styles.nav}>
+      <div className={styles.logoContainer}>
+        <SvgIcon iconType="Logo" className={styles.logo} />
+      </div>
+
+      <div className={cx(styles.navContainer, { [styles.open]: menuOpen })}>
+        <ul>
+          {sectionArr.map((item, key) => {
+            return (
+              <li key={key} className={styles.navItem}>
+                <Link href={item.href}>{item.title}</Link>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+
+      <div className={styles.hamburgerWrapper} onClick={handleClick}>
+        <div
+          className={cx(styles.center, { [styles.hamburgerOpen]: menuOpen })}
         >
-          <div className={styles.dotWrapper}>
-            <div
-              className={cx(styles.dot, {
-                [styles.shown]: key === shownKey,
-                [styles.darkMode]: darkMode,
-              })}
-            />
-          </div>
-          <section
-            className={cx(styles.section, {
-              [styles.shown]: key === shownKey,
-            })}
-          >
-            {title}
-          </section>
-        </a>
-      ))}
+          <div></div>
+        </div>
+      </div>
     </nav>
   );
 };
