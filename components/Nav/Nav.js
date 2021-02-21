@@ -4,6 +4,7 @@ import styles from "./Nav.module.scss";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import SvgIcon from "../SvgIcon";
+import Link from "next/link";
 
 const Nav = ({ sectionArr, darkMode }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,7 +24,7 @@ const Nav = ({ sectionArr, darkMode }) => {
           {sectionArr.map((item, key) => {
             return (
               <li key={key} className={styles.navItem}>
-                {item}
+                <Link href={item.href}>{item.title}</Link>
               </li>
             );
           })}

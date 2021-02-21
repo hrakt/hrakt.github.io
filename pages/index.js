@@ -13,7 +13,12 @@ import { GlobalStyles } from "../theme/globals";
 import Skills from "../components/Skills/Skills";
 
 export default function Home() {
-  const sectionArr = ["Home", "About", "Portfolio", "Blog"];
+  const sectionArr = [
+    { title: "Home", href: "/" },
+    { title: "About", href: "/" },
+    { title: "Portfolio", href: "/" },
+    { title: "Blog", href: "/" },
+  ];
   const [darkMode, setDarkMode] = useState(false);
 
   const toggle = () => {
