@@ -49,7 +49,7 @@ export default function Home() {
           <Nav sectionArr={sectionArr} darkMode={darkMode} />
           <Main />
           <About />
-          {/* <Skills /> */}
+          <Skills />
           <Work />
           {/* <DarkModeToggle toggle={toggle} darkMode={darkMode} /> */}
           <Footer />
