@@ -1,6 +1,8 @@
+@import "styles/colors.scss";
+
 .button {
   padding: 1rem 1.4rem;
-  color: #ffffff;
+  color: $white;
   align-self: center;
   border-radius: 3px;
   display: flex;
@@ -18,11 +20,11 @@
   }
 }
 .grey {
-  background: #767d84;
+  background: $grey;
 }
 
 .blue {
-  background: #2885f6;
+  background: $blue;
 }
 
 .arrow {
