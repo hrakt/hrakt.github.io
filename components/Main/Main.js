@@ -9,11 +9,19 @@ const Main = () => {
       {/* <a id="Intro" /> */}
       <div className={styles.container}>
         <div className={styles.mainContainer}>
-          <h1 className={styles.mainContainer__heading1}>Hrak Torousian </h1>
-          <h2 className={styles.mainContainer__heading2}>
-            Full Stack Developer
-          </h2>
-          <p className={styles.paragraph}>I like coding, coffee and podcasts</p>
+          <div className={styles.box}>
+            <div>
+              <h1 className={styles.mainContainer__heading1}>Hrak Torousian</h1>
+            </div>
+          </div>
+          <div className={styles.box2}>
+            <div>
+              <h2 className={styles.mainContainer__heading2}>
+                Full Stack Developer
+              </h2>
+            </div>
+          </div>
+          {/* <p className={styles.paragraph}>I like coding, coffee and podcasts</p> */}
           <div className={styles.buttonContainer}>
             <Button
               theme="blue"
