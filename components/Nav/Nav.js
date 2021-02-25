@@ -8,16 +8,15 @@ import Link from "next/link";
 
 const Nav = ({ sectionArr, darkMode }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [navSticky, setNavSticky] = useState(false);
 
   const handleClick = () => {
     setMenuOpen(!menuOpen);
   };
 
-  // const [scrollPosition, setSrollPosition] = useState(0);
-
   useEffect(() => {
     const handleKeyDown = (event) => {
-      console.log("A scroll");
+      window.scrollY !== 0 ? setNavSticky(true) : setNavSticky(false);
     };
     window.addEventListener("scroll", handleKeyDown);
 
@@ -27,7 +26,7 @@ const Nav = ({ sectionArr, darkMode }) => {
   });
 
   return (
-    <nav className={styles.nav}>
+    <nav className={cx(styles.nav, { [styles.sticky]: navSticky })}>
       <div className={styles.logoContainer}>
         <SvgIcon iconType="Logo" className={styles.logo} />
       </div>
