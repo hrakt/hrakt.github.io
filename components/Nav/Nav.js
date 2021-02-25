@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import styles from "./Nav.module.scss";
 import PropTypes from "prop-types";
@@ -13,12 +13,25 @@ const Nav = ({ sectionArr, darkMode }) => {
     setMenuOpen(!menuOpen);
   };
 
+  // const [scrollPosition, setSrollPosition] = useState(0);
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      console.log("A scroll");
+    };
+    window.addEventListener("scroll", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("scroll", handleKeyDown);
+    };
+  });
+
   return (
     <nav className={styles.nav}>
       <div className={styles.logoContainer}>
         <SvgIcon iconType="Logo" className={styles.logo} />
       </div>
-
+      {/* <div>{scrollPosition}</div>df */}
       <div className={cx(styles.navContainer, { [styles.open]: menuOpen })}>
         <ul>
           {sectionArr.map((item, key) => {
