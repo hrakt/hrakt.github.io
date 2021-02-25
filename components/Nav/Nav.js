@@ -26,31 +26,33 @@ const Nav = ({ sectionArr, darkMode }) => {
   });
 
   return (
-    <nav className={cx(styles.nav, { [styles.sticky]: navSticky })}>
-      <div className={styles.logoContainer}>
-        <SvgIcon iconType="Logo" className={styles.logo} />
-      </div>
-      {/* <div>{scrollPosition}</div>df */}
-      <div className={cx(styles.navContainer, { [styles.open]: menuOpen })}>
-        <ul>
-          {sectionArr.map((item, key) => {
-            return (
-              <li key={key} className={styles.navItem}>
-                <Link href={item.href}>{item.title}</Link>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
+    <header className={cx(styles.nav, { [styles.sticky]: navSticky })}>
+      <div className={styles.wrapper}>
+        <div className={styles.logoContainer}>
+          <SvgIcon iconType="Logo" className={styles.logo} />
+        </div>
+        {/* <div>{scrollPosition}</div>df */}
+        <div className={cx(styles.navContainer, { [styles.open]: menuOpen })}>
+          <ul>
+            {sectionArr.map((item, key) => {
+              return (
+                <li key={key} className={styles.navItem}>
+                  <Link href={item.href}>{item.title}</Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
 
-      <div className={styles.hamburgerWrapper} onClick={handleClick}>
-        <div
-          className={cx(styles.center, { [styles.hamburgerOpen]: menuOpen })}
-        >
-          <div></div>
+        <div className={styles.hamburgerWrapper} onClick={handleClick}>
+          <div
+            className={cx(styles.center, { [styles.hamburgerOpen]: menuOpen })}
+          >
+            <div></div>
+          </div>
         </div>
       </div>
-    </nav>
+    </header>
   );
 };
 
