@@ -34,6 +34,15 @@
 
 .buttonContainer {
   display: flex;
+  overflow: hidden;
+  > div:nth-of-type(1) {
+    transform: translateY(110%);
+    animation: animateUp2 0.4s forwards 1s;
+  }
+  > div:nth-of-type(2) {
+    transform: translateY(110%);
+    animation: animateUp2 0.4s forwards 1.2s;
+  }
 }
 
 .projectButton {
@@ -59,6 +68,29 @@
     width: 25px;
     height: 25px;
   }
+}
+
+.box {
+  overflow: hidden;
+  display: block;
+  > div {
+    display: inline-block;
+    transform: translateY(110%);
+    animation: animateUp 0.4s forwards 0.2s;
+    margin-right: 1rem;
+  }
+  // transform: translateY(100px);
+}
+.box2 {
+  overflow: hidden;
+  display: block;
+  > div {
+    display: inline-block;
+    transform: translateY(110%);
+    animation: animateUp 0.4s forwards 0.6s;
+    margin-right: 1rem;
+  }
+  // transform: translateY(100px);
 }
 
 @include tablet {
@@ -99,5 +131,22 @@
       font-size: 2.5rem;
       font-weight: 200;
     }
+  }
+}
+
+@keyframes animateUp {
+  0% {
+    transform: translateY(110%);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes animateUp2 {
+  0% {
+    transform: translateY(110%);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
