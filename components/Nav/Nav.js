@@ -32,17 +32,6 @@ const Nav = ({ sectionArr, darkMode }) => {
           <SvgIcon iconType="Logo" className={styles.logo} />
         </div>
         {/* <div>{scrollPosition}</div>df */}
-        <div className={cx(styles.navContainer, { [styles.open]: menuOpen })}>
-          <ul>
-            {sectionArr.map((item, key) => {
-              return (
-                <li key={key} className={styles.navItem}>
-                  <Link href={item.href}>{item.title}</Link>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
 
         <div className={styles.hamburgerWrapper} onClick={handleClick}>
           <div
@@ -51,6 +40,22 @@ const Nav = ({ sectionArr, darkMode }) => {
             <div></div>
           </div>
         </div>
+      </div>
+      <div
+        className={cx(styles.navContainer, {
+          [styles.open]: menuOpen,
+          [styles.sticky]: navSticky,
+        })}
+      >
+        <ul>
+          {sectionArr.map((item, key) => {
+            return (
+              <li key={key} className={styles.navItem}>
+                <Link href={item.href}>{item.title}</Link>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </header>
   );

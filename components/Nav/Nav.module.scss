@@ -3,13 +3,14 @@
 
 .nav {
   width: 100%;
-  // max-width: 1140px;
   z-index: 10;
   display: flex;
   align-items: center;
   padding: 1.5rem 1.5rem 0 1.5rem;
   display: flex;
-  transition: all 0.2s linear;
+  transition: all 0.2s;
+
+  animation: animateNav 0.4s forwards;
 
   &.sticky {
     position: fixed;
@@ -20,13 +21,14 @@
 }
 .wrapper {
   display: flex;
-  width: 100%;
+  width: 100vh;
   height: 100%;
   justify-content: space-between;
 }
 
 .navContainer {
-  position: fixed;
+  position: absolute;
+  visibility: hidden;
   margin: 0;
   top: 0;
   right: 0;
@@ -36,9 +38,14 @@
   height: 100vh;
   transform: translateX(15rem);
   padding: 4rem 5rem 4rem 5rem;
-  transition: transform 0.5s;
+  transition: all 0.5s;
 
   z-index: 100;
+
+  &.open {
+    transform: translateX(0);
+    visibility: visible;
+  }
 
   ul {
     display: flex;
@@ -68,10 +75,6 @@
       visibility: visible;
       transform: scaleX(1);
     }
-  }
-
-  &.open {
-    transform: translateX(0);
   }
 }
 
@@ -140,28 +143,46 @@
     // padding: 2rem 10rem 0 10rem;
   }
   .logoContainer {
-    height: 6rem;
+    height: 4rem;
     margin-left: 7rem;
     margin-right: 4rem;
   }
 
   .navContainer {
-    height: 4rem;
+    height: 2rem;
     transform: translateX(0);
     background-color: inherit;
-    position: relative;
+    position: absolute;
+    top: 2rem;
+    left: 18rem;
     width: 100%;
-    height: 6.2rem;
+    visibility: visible;
     padding: 0;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    transition: all 0.5s;
     ul {
       flex-direction: row;
       justify-content: flex-start;
     }
+    &.sticky {
+      top: 2.5rem;
+      left: 16rem;
+    }
   }
   .hamburgerWrapper {
     display: none;
+  }
+}
+
+@keyframes animateNav {
+  0% {
+    transform: translateY(-6rem);
+    opacity: 0.1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
