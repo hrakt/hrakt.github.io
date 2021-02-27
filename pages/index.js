@@ -11,14 +11,9 @@ import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "../theme/theme";
 import { GlobalStyles } from "../theme/globals";
 import Skills from "../components/Skills/Skills";
+import DefaultLayout from "../layouts";
 
 export default function Home() {
-  const sectionArr = [
-    { title: "Home", href: "/" },
-    { title: "About", href: "/" },
-    { title: "Portfolio", href: "/" },
-    { title: "Blog", href: "/" },
-  ];
   const [darkMode, setDarkMode] = useState(false);
 
   const toggle = () => {
@@ -50,15 +45,14 @@ export default function Home() {
           ></script>
         </Head>
 
-        <main>
-          <Nav sectionArr={sectionArr} darkMode={darkMode} />
+        <DefaultLayout>
           <Main />
           <About />
           {/* <Skills /> */}
           <Work />
           {/* <DarkModeToggle toggle={toggle} darkMode={darkMode} /> */}
           <Footer />
-        </main>
+        </DefaultLayout>
       </ThemeProvider>
     </div>
   );

@@ -6,7 +6,14 @@ import cx from "classnames";
 import SvgIcon from "../SvgIcon";
 import Link from "next/link";
 
-const Nav = ({ sectionArr, darkMode }) => {
+const Nav = ({}) => {
+  const sectionArr = [
+    { title: "Home", href: "/" },
+    { title: "About", href: "/" },
+    { title: "Portfolio", href: "/" },
+    { title: "Blog", href: "/" },
+  ];
+
   const [menuOpen, setMenuOpen] = useState(false);
   const [navSticky, setNavSticky] = useState(false);
 
