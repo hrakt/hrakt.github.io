@@ -8,9 +8,9 @@ import Link from "next/link";
 const Nav = ({}) => {
   const sectionArr = [
     { title: "Home", href: "/" },
-    { title: "About", href: "/" },
-    { title: "Portfolio", href: "/" },
-    { title: "Blog", href: "/" },
+    { title: "About", href: "/about" },
+    { title: "Portfolio", href: "/portfolio" },
+    { title: "Blog", href: "/blog" },
   ];
 
   const [menuOpen, setMenuOpen] = useState(false);
@@ -37,8 +37,6 @@ const Nav = ({}) => {
         <div className={styles.logoContainer}>
           <SvgIcon iconType="Logo" className={styles.logo} />
         </div>
-        {/* <div>{scrollPosition}</div>df */}
-
         <div className={styles.hamburgerWrapper} onClick={handleClick}>
           <div
             className={cx(styles.center, { [styles.hamburgerOpen]: menuOpen })}
