@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 
 import styles from "./Nav.module.scss";
-import PropTypes from "prop-types";
 import cx from "classnames";
 import SvgIcon from "../SvgIcon";
 import Link from "next/link";
@@ -66,11 +65,6 @@ const Nav = ({}) => {
       </div>
     </header>
   );
-};
-
-Nav.propTpes = {
-  sectionArr: PropTypes.array.isRequired,
-  darkMode: PropTypes.bool,
 };
 
 export default Nav;
