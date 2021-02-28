@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from "react";
 
 import styles from "./Nav.module.scss";
-import PropTypes from "prop-types";
 import cx from "classnames";
 import SvgIcon from "../SvgIcon";
 import Link from "next/link";
 
-const Nav = ({ sectionArr, darkMode }) => {
+const Nav = ({}) => {
+  const sectionArr = [
+    { title: "Home", href: "/" },
+    { title: "About", href: "/about" },
+    { title: "Portfolio", href: "/portfolio" },
+    { title: "Blog", href: "/blog" },
+  ];
+
   const [menuOpen, setMenuOpen] = useState(false);
   const [navSticky, setNavSticky] = useState(false);
 
@@ -31,8 +37,6 @@ const Nav = ({ sectionArr, darkMode }) => {
         <div className={styles.logoContainer}>
           <SvgIcon iconType="Logo" className={styles.logo} />
         </div>
-        {/* <div>{scrollPosition}</div>df */}
-
         <div className={styles.hamburgerWrapper} onClick={handleClick}>
           <div
             className={cx(styles.center, { [styles.hamburgerOpen]: menuOpen })}
@@ -59,11 +63,6 @@ const Nav = ({ sectionArr, darkMode }) => {
       </div>
     </header>
   );
-};
-
-Nav.propTpes = {
-  sectionArr: PropTypes.array.isRequired,
-  darkMode: PropTypes.bool,
 };
 
 export default Nav;
