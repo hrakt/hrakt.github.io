@@ -28,14 +28,15 @@
 }
 
 .icon {
-  cursor: pointer;
-  &.github:hover {
-    color: #435761;
-  }
-  &.dribble:hover {
-    color: #d41c62;
-  }
-  &.linkedin:hover {
-    color: #0c66c2;
-  }
+  width: 3rem;
+}
+
+.github:hover {
+  color: #435761;
+}
+.dribble:hover {
+  color: #d41c62;
+}
+.linkedin:hover {
+  color: #0c66c2;
 }

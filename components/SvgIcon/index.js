@@ -1,6 +1,5 @@
 import cx from "classnames";
 import styles from "./SvgIcon.module.scss";
-
 import icons from "./icons";
 
 const SvgIcon = ({ className, iconType }) => {

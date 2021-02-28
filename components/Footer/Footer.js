@@ -1,6 +1,5 @@
 import styles from "../Footer/Footer.module.scss";
 import SvgIcon from "../SvgIcon";
-import cx from "classnames";
 
 const Footer = () => {
   return (
@@ -10,15 +9,16 @@ const Footer = () => {
       </div>
       <p classNam={styles.iconHeading}>Find me here:</p>
       <div className={styles.iconContainer}>
-        <SvgIcon iconType="Github" className={cx(styles.icon, styles.github)} />
-        <SvgIcon
-          iconType="Linkedin"
-          className={cx(styles.icon, styles.linkedin)}
-        />
-        <SvgIcon
-          iconType="Dribble"
-          className={cx(styles.icon, styles.dribble)}
-        />
+        <a href="//github.com/hrakt/" className={styles.icon}>
+          <SvgIcon iconType="Github" className={styles.github} />
+        </a>
+
+        <a href="//www.linkedin.com/in/hrakt/" className={styles.icon}>
+          <SvgIcon iconType="Linkedin" className={styles.linkedin} />
+        </a>
+        <a href="//dribbble.com/hrakt" className={styles.icon}>
+          <SvgIcon iconType="Dribble" className={styles.dribble} />
+        </a>
       </div>
 
       <p>© Hrak Torousian. All rights reserved. 2021</p>
