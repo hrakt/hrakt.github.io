@@ -21,7 +21,6 @@ const Main = () => {
               </h2>
             </div>
           </div>
-          {/* <p className={styles.paragraph}>I like coding, coffee and podcasts</p> */}
           <div className={styles.buttonContainer}>
             <Button
               theme="blue"
