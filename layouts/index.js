@@ -2,6 +2,7 @@ import { useState } from "react";
 import Head from "next/head";
 import DarkModeToggle from "../components/DarkModeToggle/DarkModeToggle";
 import Nav from "../components/Nav/Nav";
+import Footer from "../components/Footer/Footer";
 import { GlobalStyles } from "../theme/globals";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "../theme/theme";
@@ -39,6 +40,7 @@ const DefaultLayout = ({ children }) => {
         <main>
           <Nav />
           {children}
+          <Footer />
         </main>
       </ThemeProvider>
     </div>
