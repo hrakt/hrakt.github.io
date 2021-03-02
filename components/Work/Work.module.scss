@@ -10,12 +10,11 @@
 
 .header {
   margin-bottom: 4rem;
-  text-align: center;
+  padding: 0 1rem;
+
+  // text-align: center;
 
   span {
-    text-transform: uppercase;
-    letter-spacing: 0.1cm;
-    font-weight: 400;
     color: grey;
   }
 }
