@@ -45,7 +45,11 @@ const Work = ({ portfolio }) => {
           ]
         ) : (
           <Masonry
-            breakpointCols={3}
+            breakpointCols={{
+              default: 3,
+              1500: 2,
+              1100: 1,
+            }}
             className={styles.masonryGrid}
             columnClassName={styles.masonryGrid__column}
           >
