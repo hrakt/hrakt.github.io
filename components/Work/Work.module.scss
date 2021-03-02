@@ -59,6 +59,25 @@
   }
 }
 
+.buttonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.masonryGrid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -10px; /* gutter size offset */
+  width: auto;
+
+  &__column {
+    padding-left: 10px; /* gutter size */
+    background-clip: padding-box;
+  }
+}
+
 @include tablet {
   .item {
     &__right {
