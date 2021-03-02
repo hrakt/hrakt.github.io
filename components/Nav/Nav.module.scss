@@ -28,7 +28,7 @@
 }
 
 .navContainer {
-  position: absolute;
+  position: fixed;
   visibility: hidden;
   margin: 0;
   top: 0;
@@ -156,7 +156,6 @@
     position: absolute;
     top: 2rem;
     left: 18rem;
-    width: 100%;
     visibility: visible;
     padding: 0;
     display: flex;
