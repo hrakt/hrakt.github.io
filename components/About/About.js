@@ -3,7 +3,6 @@ import styles from "../About/About.module.scss";
 const About = () => {
   return (
     <>
-      <a id="About" />
       <div className={styles.container}>
         <div className={styles.image__container}>
           <div className={styles.image__box}>

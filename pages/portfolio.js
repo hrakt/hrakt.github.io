@@ -5,7 +5,7 @@ export default function PortfolioPage() {
   return (
     <div>
       <DefaultLayout>
-        <Portfolio />
+        <Portfolio portfolio={true} />
       </DefaultLayout>
     </div>
   );

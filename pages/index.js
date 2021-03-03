@@ -9,7 +9,7 @@ export default function Home() {
       <DefaultLayout>
         <Main />
         <About />
-        <Work />
+        <Work portfolio={false} />
       </DefaultLayout>
     </div>
   );

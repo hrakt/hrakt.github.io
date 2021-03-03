@@ -10,12 +10,11 @@
 
 .header {
   margin-bottom: 4rem;
-  text-align: center;
+  padding: 0 1rem;
+
+  // text-align: center;
 
   span {
-    text-transform: uppercase;
-    letter-spacing: 0.1cm;
-    font-weight: 400;
     color: grey;
   }
 }
@@ -57,6 +56,25 @@
         font-weight: 300;
       }
     }
+  }
+}
+
+.buttonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.masonryGrid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -10px; /* gutter size offset */
+  width: auto;
+
+  &__column {
+    padding-left: 10px; /* gutter size */
+    background-clip: padding-box;
   }
 }
 
