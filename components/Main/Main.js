@@ -25,6 +25,7 @@ const Main = () => {
               theme="blue"
               icon="Projects"
               className={styles.projectButton}
+              link="/portfolio"
             >
               Projects
             </Button>
@@ -32,6 +33,7 @@ const Main = () => {
               theme="grey"
               icon="Download"
               className={styles.downloadButton}
+              link="Resume.docx"
             >
               Resume
             </Button>
