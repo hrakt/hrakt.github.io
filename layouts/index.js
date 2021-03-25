@@ -6,7 +6,6 @@ import Footer from "../components/Footer/Footer";
 import { GlobalStyles } from "../theme/globals";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "../theme/theme";
-import { GA_TRACKING_ID } from "../lib/gtag";
 
 const DefaultLayout = ({ children }) => {
   const [darkMode, setDarkMode] = useState(false);
@@ -35,22 +34,6 @@ const DefaultLayout = ({ children }) => {
           integrity="sha256-Wua0LsQkGDEeIkbmBNjj9wcThJh5uCD6R8+5YQhXveQ="
           crossorigin="anonymous"
         ></script>
-        <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_TRACKING_ID}', {
-              page_path: window.location.pathname,
-            });
-          `,
-          }}
-        />
       </Head>
       <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
         <GlobalStyles />
