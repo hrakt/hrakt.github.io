@@ -34,15 +34,6 @@ const DefaultLayout = ({ children }) => {
           integrity="sha256-Wua0LsQkGDEeIkbmBNjj9wcThJh5uCD6R8+5YQhXveQ="
           crossorigin="anonymous"
         ></script>
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-WL447Q1H5W"
-        ></script>
-        <script>
-          window.dataLayer = window.dataLayer || []; function gtag()
-          {dataLayer.push(arguments)}
-          gtag('js', new Date()); gtag('config', 'G-WL447Q1H5W');
-        </script>
       </Head>
       <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
         <GlobalStyles />
