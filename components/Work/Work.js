@@ -29,7 +29,7 @@ const Work = ({ portfolio }) => {
                   <div className={styles.item__textBox}>
                     <div>{item.type}</div>
                     <div>{item.title}</div>
-                    <dibv>{item.description}</dibv>
+                    <div>{item.description}</div>
                   </div>
                   <div className={styles.item__imageBox}>
                     <img src={item.imgSrc} className={styles.item__image} />
