@@ -8,9 +8,7 @@ const BlogPost = ({ post }) => {
       <h1>{post.fields.title}</h1>
       <p>{post.fields.date}</p>
       <div className={styles.content}>
-        {post && post.fields
-          ? documentToReactComponents(post.fields.body)
-          : null}
+        {documentToReactComponents(post.fields.body)}
       </div>
       <Button link="/blog" className={styles.button} theme="grey">
         Back to Blog

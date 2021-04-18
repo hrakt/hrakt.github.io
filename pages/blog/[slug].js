@@ -1,41 +1,67 @@
 import DefaultLayout from "../../layouts/index";
 import BlogPost from "../../components/Blog/BlogPost";
+import { createClient } from "contentful";
 
-// let client = require("contentful").createClient({
-//   space: process.env.CONTENTFUL_SPACE_ID,
-//   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-// });
+export async function getAllBlogPosts() {
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+  });
 
-// export async function getStaticPaths() {
-//   let data = await client.getEntries({
-//     content_type: "post",
-//   });
+  const entries = await client.getEntries({
+    content_type: "post",
+  });
 
-//   return {
-//     paths: data.items.map((item) => ({
-//       params: { slug: item.fields.slug },
-//     })),
-//     fallback: true,
-//   };
-// }
+  return entries?.items?.map((item) => {
+    const fields = item.fields;
+    return {
+      slug: fields.slug,
+    };
+  });
+}
 
-// export async function getStaticProps({ params }) {
-//   let data = await client.getEntries({
-//     content_type: "post",
-//     "fields.slug": params.slug,
-//   });
+export async function getSingleBlogPost(slug) {
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+  });
 
-//   return {
-//     props: {
-//       post: data.items[0],
-//     },
-//   };
-// }
+  const entry = await client.getEntries({
+    content_type: "post",
+    limit: 1,
+    "fields.slug[in]": slug,
+  });
 
-export default function Post({}) {
+  return entry?.items?.map((item) => {
+    return item;
+  })[0];
+}
+
+export const getStaticPaths = async () => {
+  const posts = await getAllBlogPosts();
+  const paths = posts?.map(({ slug }) => ({ params: { slug } })) ?? [];
+
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+export const getStaticProps = async (context) => {
+  const { slug } = context.params;
+  const post = await getSingleBlogPost(slug);
+
+  return {
+    props: { post },
+  };
+};
+
+export default function Post({ post }) {
   return (
     <div>
-      <DefaultLayout>{/* <BlogPost post={post} /> */}</DefaultLayout>
+      <DefaultLayout>
+        <BlogPost post={post} />
+      </DefaultLayout>
     </div>
   );
 }
