@@ -7,7 +7,7 @@ const Footer = () => {
       <div className={styles.logoContainer}>
         <SvgIcon iconType="Logo" className={styles.logo} />
       </div>
-      <p classNam={styles.iconHeading}>Find me here:</p>
+      <p className={styles.iconHeading}>Find me here:</p>
       <div className={styles.iconContainer}>
         <a href="//github.com/hrakt/" className={styles.icon}>
           <SvgIcon iconType="Github" className={styles.github} />

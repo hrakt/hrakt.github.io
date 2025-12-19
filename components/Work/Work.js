@@ -19,12 +19,12 @@ const Work = ({ portfolio }) => {
         </div>
         {!portfolio ? (
           [
-            workArr.map((item, key) => {
-              key % 2 === 0 ? (align = "left") : (align = "right");
+            workArr.map((item, index) => {
+              index % 2 === 0 ? (align = "left") : (align = "right");
               return (
                 <div
                   className={classNames(styles.item, styles[`item__${align}`])}
-                  key={key}
+                  key={index}
                 >
                   <div className={styles.item__textBox}>
                     <div>{item.type}</div>
