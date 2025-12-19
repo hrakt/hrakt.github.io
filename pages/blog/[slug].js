@@ -3,6 +3,13 @@ import BlogPost from "../../components/Blog/BlogPost";
 import { createClient } from "contentful";
 
 export async function getAllBlogPosts() {
+  if (!process.env.CONTENTFUL_SPACE_ID || !process.env.CONTENTFUL_ACCESS_TOKEN) {
+    console.warn(
+      "CONTENTFUL_SPACE_ID or CONTENTFUL_ACCESS_TOKEN is not set — returning no posts for getAllBlogPosts."
+    );
+    return [];
+  }
+
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
@@ -21,6 +28,13 @@ export async function getAllBlogPosts() {
 }
 
 export async function getSingleBlogPost(slug) {
+  if (!process.env.CONTENTFUL_SPACE_ID || !process.env.CONTENTFUL_ACCESS_TOKEN) {
+    console.warn(
+      "CONTENTFUL_SPACE_ID or CONTENTFUL_ACCESS_TOKEN is not set — getSingleBlogPost returning null."
+    );
+    return null;
+  }
+
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
