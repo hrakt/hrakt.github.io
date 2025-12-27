@@ -21,7 +21,7 @@ const Footer = () => {
         </a>
       </div>
 
-      <p>© Hrak Torousian. All rights reserved. 2021</p>
+      <p>© Hrak Torousian. All rights reserved. {new Date().getFullYear()}</p>
     </div>
   );
 };
