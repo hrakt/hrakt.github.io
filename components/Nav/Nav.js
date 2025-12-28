@@ -5,7 +5,7 @@ import cx from "classnames";
 import SvgIcon from "../SvgIcon";
 import Link from "next/link";
 
-const Nav = ({}) => {
+const Nav = ({ }) => {
   const sectionArr = [
     { title: "Home", href: "/" },
     { title: "About", href: "/about" },
